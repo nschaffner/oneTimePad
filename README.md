@@ -27,7 +27,7 @@ After cloning the respository, please follow the steps below to run the keygen.c
     compileall
 
 ### Example
-Here is an example run of oneTimePad:
+Here is an example run of the five programs in oneTimePad:
 
 ![](example-output.png)
 
