@@ -15,7 +15,8 @@ In the syntax above, ciphertext is the name of a file in the current directory t
     otp_enc_d listening_port\
 The listening_port is the port that this program will listen on and will always be started in the background. All errors are output to stderr but will not crash or otherwise exit, unless the erros happen when the program is starting up. This program uses "localhost" as the target IP address/host.
 - The otp_enc.c program connects to otp_enc_d and asks it to perform a one-time pad style encryption. This program does not do the encryption but receives the encrypted text back from otp_enc_d. The syntax for this program is:\
-    otp_enc plaintext key port
+    otp_enc plaintext key port\
+    
 In the syntax above, plaintext is the name of a file in the current directory that contains the plaintext to encrypt, key contains the encryption key that will be used to encrypt the text and port is the port that this program should attempt to connect to otp_enc_d on. When this program receives the ciphertext back from otp_enc_d, it will output it to stdout. If this program receives key or plaintext files with any bad characters in them, or the key file is shorter than the plaintext file, it will terminate, send appropriate error text to sterr and set the exit value to 1. This program cannot connect to otp_dec_d. All error text will be output to stderr.
 
 ### Deployment
